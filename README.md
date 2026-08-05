@@ -1,3 +1,5 @@
+![Company Brain Template: the knowledge your AI assistants read before producing anything. CORE.md is always in context, MANIFEST.yaml decides what loads and when, validators hold the rules.](.github/social-preview.png)
+
 # Company Brain Template
 
 **Your company's memory, written in a format AI assistants read before producing anything.**
@@ -60,7 +62,13 @@ Files of facts carry `verified_on` and `review_every` in their frontmatter. Once
 
 Not with a knowledge management project: with three artefacts you already have.
 
-**1. Clone and make it yours**
+**1. Make it yours**
+
+Press **Use this template** at the top of this page. You get a new repository with no history of ours attached, which is what you want: a brain should start from your first commit, not from someone else's.
+
+Make it **private**. It will hold pricing, margins and client information.
+
+If you would rather not go through GitHub:
 
 ```bash
 git clone https://github.com/Castaldo-Solutions/company-brain-template.git brain
