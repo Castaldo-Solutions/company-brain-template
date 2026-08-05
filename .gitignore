@@ -1,0 +1,17 @@
+# Dependencies (this repo ships none, but forks may add tooling)
+node_modules/
+
+# Generated indexes and exports
+out/
+dist/
+
+# Local drafts that should never reach the repository. Useful convention:
+# anything you are not ready to consider a fact yet.
+*.local.md
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

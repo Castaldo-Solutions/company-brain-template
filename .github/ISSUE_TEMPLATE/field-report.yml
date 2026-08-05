@@ -1,0 +1,45 @@
+name: Field report
+description: You used the template. Tell us what happened, including what did not work.
+title: "[field report] "
+labels: ["field report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful issue type in the repo. The template comes from one company's practice, and reports from a different context are the only way it stops being one company's practice.
+  - type: textarea
+    id: context
+    attributes:
+      label: Your context
+      description: Size of the company, what it does, how many people touch the brain. No names needed.
+      placeholder: Six people, B2B services, two of us write in it.
+    validations:
+      required: true
+  - type: textarea
+    id: kept
+    attributes:
+      label: What you kept
+      description: Which parts of the structure survived contact with reality.
+    validations:
+      required: false
+  - type: textarea
+    id: changed
+    attributes:
+      label: What you changed or deleted
+      description: And why. This is the part we learn from.
+    validations:
+      required: true
+  - type: textarea
+    id: broke
+    attributes:
+      label: Where it fell apart
+      description: The point at which the model stopped fitting, if it did.
+    validations:
+      required: false
+  - type: input
+    id: tooling
+    attributes:
+      label: Which assistant or tooling reads your brain
+      placeholder: Claude Code, and an n8n workflow
+    validations:
+      required: false

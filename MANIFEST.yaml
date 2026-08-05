@@ -1,0 +1,89 @@
+# MANIFEST: the routing contract of the company brain
+#
+# An agent decides what to load by reading this file, not by grepping around.
+# Every entry declares: where the file lives, which ring it belongs to, which
+# words trigger it, and whether it is confidential.
+#
+# How to read it:
+#   ring 0  always in context. By definition, very few files qualify.
+#   ring 1  loaded on demand, based on the type of work in progress.
+#   ring 2  never in context: searched or regenerated when needed.
+#
+# Rule of thumb: a file earns ring 1 only if it is needed more than once a
+# month. Everything else stays in ring 2.
+
+version: 1
+updated: [YYYY-MM-DD]
+
+rings:
+  0: always in context
+  1: loaded on demand, based on the type of work
+  2: never in context, searched or regenerated
+
+files:
+  # --- ring 0: the bare minimum ---
+  - path: CORE.md
+    ring: 0
+
+  # --- ring 1: facts needed often ---
+  - path: company/identity.md
+    ring: 1
+    load_when: [content, copy, proposal, presentation, website, brand, tone of voice]
+
+  - path: company/offering.md
+    ring: 1
+    load_when: [proposal, service, commercial page, pitch]
+
+  - path: company/icp.md
+    ring: 1
+    load_when: [proposal, qualification, campaign, targeting, lead scoring]
+
+  - path: company/proof.md
+    ring: 1
+    load_when: [proposal, article, pitch, case study, reference]
+
+  - path: company/pricing.md
+    ring: 1
+    confidential: true
+    never_in: [public content, output to third parties]
+    load_when: [proposal, quote, discount, negotiation, budget]
+
+  # --- ring 1: how things get done ---
+  - path: playbooks/README.md
+    ring: 1
+    load_when: [which playbook, index of playbooks]
+    note: index. CORE points here instead of at individual playbooks
+
+  - path: playbooks/proposal.md
+    ring: 1
+    load_when: [proposal, quote, offer]
+
+  # --- ring 2: searched when needed ---
+  - path: decisions/**
+    ring: 2
+    append_only: true
+    load_when: [why did we choose, history, retrospective]
+
+  - path: examples/**
+    ring: 2
+    load_when: [producing an artefact for which an example exists]
+    note: loads TOGETHER with the playbook, never instead of it
+
+  # --- examples of confidential entries, adapt to your case ---
+  # - path: clients/**
+  #   ring: 2
+  #   confidential: true
+  #   never_in: [public content, output to third parties]
+  #   load_when: [proposal to existing client, follow-up, renewal]
+  #
+  # - path: people/**
+  #   ring: 2
+  #   confidential: true
+
+# Who consumes this brain. Worth keeping current: if you change the structure,
+# these consumers need to be updated too.
+consumers:
+  - name: claude-code
+    how: submodule or symlink in working repos, CORE.md imported in CLAUDE.md
+  # - name: [automation]
+  #   how: [read-only clone, refreshed on push]
