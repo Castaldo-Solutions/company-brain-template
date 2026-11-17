@@ -4,9 +4,9 @@ Three skills to build and keep a **company brain**: the facts, decisions and pla
 
 | Skill | What it does | When |
 |---|---|---|
-| `/company-brain:setup` | Creates the brain from documents you already have: your best won proposal, your terms, recent client emails. Asks only what those documents do not answer, then writes `CORE.md`, `MANIFEST.yaml` and the first fact files | once, at the start |
-| `/company-brain:capture` | Puts a fact, a decision or a correction in the one file where it belongs, updates its verification date, keeps the routing manifest in sync | every time you correct an assistant |
-| `/company-brain:review` | Finds what has gone stale, broken routing, writing rules broken, numbers without a source, confidential files without the flag | once a month, or before a proposal |
+| `/cbrain:setup` | Creates the brain from documents you already have: your best won proposal, your terms, recent client emails. Asks only what those documents do not answer, then writes `CORE.md`, `MANIFEST.yaml` and the first fact files | once, at the start |
+| `/cbrain:capture` | Puts a fact, a decision or a correction in the one file where it belongs, updates its verification date, keeps the routing manifest in sync | every time you correct an assistant |
+| `/cbrain:review` | Finds what has gone stale, broken routing, writing rules broken, numbers without a source, confidential files without the flag | once a month, or before a proposal |
 
 The skills also trigger on their own when the conversation calls for them, for example when you say "remember that" or "what has gone stale".
 
@@ -29,12 +29,7 @@ Your brain will hold prices, margins and client information: keep it in a **priv
 
 ## Try it locally
 
-```bash
-git clone https://github.com/Castaldo-Solutions/company-brain-template.git
-claude --plugin-dir company-brain-template/plugin
-```
-
-Then, in a new or existing project folder: `/company-brain:setup`.
+From a copy of the [company-brain-template](https://github.com/Castaldo-Solutions/company-brain-template) repository, start Claude Code with `--plugin-dir` pointing at this `plugin` folder. Then, in a new or existing project folder, run `/cbrain:setup`.
 
 ## Language
 
