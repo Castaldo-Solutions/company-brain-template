@@ -14,5 +14,6 @@
   "keywords": ["company-brain", "knowledge-management", "context-engineering", "decision-records", "playbooks", "small-business"],
   "documentationUrl": "https://github.com/Castaldo-Solutions/company-brain-template/tree/main/plugin#readme",
   "supportUrl": "https://github.com/Castaldo-Solutions/company-brain-template/issues",
+  "privacyPolicyUrl": "https://github.com/Castaldo-Solutions/company-brain-template/blob/main/plugin/PRIVACY.md",
   "icon": "./.claude-plugin/icon.png"
 }
