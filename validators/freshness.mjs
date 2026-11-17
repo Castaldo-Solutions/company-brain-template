@@ -13,8 +13,8 @@ import { join, relative } from 'node:path';
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 
 // Artefacts and procedures are not facts: they carry no verified_on and do
-// not expire.
-const SKIP = new Set(['node_modules', '.git', 'validators', '.github']);
+// not expire. plugin/ holds the Claude skills, which are instructions too.
+const SKIP = new Set(['node_modules', '.git', 'validators', '.github', 'plugin']);
 
 // Project documentation, not company facts.
 const NOT_FACTS = new Set(['README.md', 'INSTALL.md', 'CONTRIBUTING.md', 'CODE_OF_CONDUCT.md', 'SECURITY.md', 'CORE.md']);

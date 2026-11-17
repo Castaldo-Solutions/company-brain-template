@@ -1,0 +1,18 @@
+{
+  "name": "company-brain",
+  "displayName": "Company Brain",
+  "version": "1.0.0",
+  "description": "Build and keep a company brain: the facts, decisions and playbooks your AI assistants read before producing anything. Set it up from documents you already have, capture every correction in the right file, and find what has gone stale.",
+  "author": {
+    "name": "Castaldo Solutions",
+    "email": "info@castaldosolutions.it",
+    "url": "https://www.castaldosolutions.it"
+  },
+  "homepage": "https://www.castaldosolutions.it/articles/en/blog/company-brain-memoria-aziendale-ai",
+  "repository": "https://github.com/Castaldo-Solutions/company-brain-template",
+  "license": "MIT",
+  "keywords": ["company-brain", "knowledge-management", "context-engineering", "decision-records", "playbooks", "small-business"],
+  "documentationUrl": "https://github.com/Castaldo-Solutions/company-brain-template/tree/main/plugin#readme",
+  "supportUrl": "https://github.com/Castaldo-Solutions/company-brain-template/issues",
+  "icon": "./.claude-plugin/icon.png"
+}

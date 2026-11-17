@@ -96,6 +96,14 @@ See [INSTALL.md](INSTALL.md). For Claude Code it is one line in your `CLAUDE.md`
 
 When it comes up, and not before. Every correction you make to an agent's output is a fact missing here. If you correct the same thing three times, the agent is not the problem.
 
+## Use it as a Claude plugin
+
+If you would rather have Claude do the scaffolding, the [`plugin/`](plugin/) folder is a Claude plugin with three skills: `setup` builds the brain from documents you already have, `capture` puts every correction in the right file, `review` finds what has gone stale. Markdown only, no scripts.
+
+```bash
+claude --plugin-dir company-brain-template/plugin
+```
+
 ## Validators
 
 Rules that live only in a document are wishes. These make them executable.
